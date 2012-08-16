@@ -40,6 +40,8 @@
 
 + (NSString *)intervalSinceNow: (NSString *) theDate;
 
++ (NSString *)getUserUid;
+
 + (BOOL)isDigitsString:(NSString*)str;
 
 + (BOOL)NSStringIsValidEmail:(NSString *)checkString;

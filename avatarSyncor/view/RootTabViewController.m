@@ -12,6 +12,9 @@
 #import "LocalFriendsViewController.h"
 #import "SinaFriendsViewController.h"
 #import "UIImage+Scale.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "SinaSDKManager.h"
 
 @interface RootTabViewController()
 
@@ -65,6 +68,7 @@
 
         [[UIToolbar appearance]setBackgroundImage:[UIImage imageNamed:@"toolbar_background"] forToolbarPosition:UIToolbarPositionBottom barMetrics:UIBarMetricsDefault];
     }
+    
 }
 
 - (void)viewDidUnload
@@ -110,7 +114,16 @@
 //        [self startMyshowAction];
 //        return NO;
 //    }
-
+    if ([viewController isKindOfClass:[SinaFriendsViewController class]] && ![[SinaSDKManager sharedManager] isLogin])
+    {
+        LoginViewController * loginViewController = [[[LoginViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+        
+        UINavigationController * navController= [[UINavigationController alloc] initWithRootViewController: loginViewController];
+        [self presentModalViewController: navController animated:YES];
+        [navController release];
+        return NO;
+    }
+    
     return YES;
 }
 

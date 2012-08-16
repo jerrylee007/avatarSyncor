@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTabViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize rootViewController = _rootViewController;
+@synthesize rootTabViewController = _rootTabViewController;
 
 - (void)dealloc
 {
@@ -24,7 +26,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    [self.window addSubview:_rootViewController.view];
+//    _rootTabViewController = [[RootTabViewController alloc] initWithNibName:nil bundle:nil];
+
+    [self.window addSubview:_rootTabViewController.view];
+
     [self.window makeKeyAndVisible];
 
     return YES;}

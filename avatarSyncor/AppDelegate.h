@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) IBOutlet UITabBarController *rootViewController;
+@property (strong, nonatomic) IBOutlet UITabBarController *rootTabViewController;
+
+@property (strong, nonatomic) UIViewController *rootViewController;
 
 @end

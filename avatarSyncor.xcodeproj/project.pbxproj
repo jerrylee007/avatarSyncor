@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0FA45215DCEE8400E2574B /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FA44F15DCEE8400E2574B /* iToast.m */; };
+		CE0FA45315DCEE8400E2574B /* WaitOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FA45115DCEE8400E2574B /* WaitOverlay.m */; };
+		CE0FA45715DCFD3C00E2574B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FA45515DCFD3B00E2574B /* SettingViewController.m */; };
+		CE0FA45815DCFD3C00E2574B /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0FA45615DCFD3B00E2574B /* SettingViewController.xib */; };
 		CE2AC9D315DC9B940009E024 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D215DC9B940009E024 /* UIKit.framework */; };
 		CE2AC9D515DC9B940009E024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D415DC9B940009E024 /* Foundation.framework */; };
 		CE2AC9D715DC9B940009E024 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D615DC9B940009E024 /* CoreGraphics.framework */; };
@@ -70,6 +74,17 @@
 		CE2ACADC15DCB8020009E024 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADB15DCB8010009E024 /* Security.framework */; };
 		CE2ACADE15DCB81D0009E024 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADD15DCB81D0009E024 /* ImageIO.framework */; };
 		CE2ACAE015DCB83C0009E024 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADF15DCB83C0009E024 /* MapKit.framework */; };
+		CE2ACAF115DCC6FA0009E024 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */; };
+		CE2ACAF215DCC6FA0009E024 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */; };
+		CE2ACB0A15DCCEBF0009E024 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAF815DCCEBF0009E024 /* AddressBookManager.m */; };
+		CE2ACB0B15DCCEBF0009E024 /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAFB15DCCEBF0009E024 /* BaseManager.m */; };
+		CE2ACB0D15DCCEBF0009E024 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB0115DCCEBF0009E024 /* DataManager.m */; };
+		CE2ACB0E15DCCEBF0009E024 /* SinaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB0415DCCEBF0009E024 /* SinaRequest.m */; };
+		CE2ACB0F15DCCEBF0009E024 /* SinaSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB0615DCCEBF0009E024 /* SinaSDKManager.m */; };
+		CE2ACB1015DCCEBF0009E024 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB0915DCCEBF0009E024 /* ChineseToPinyin.m */; };
+		CE2ACB1215DCD3710009E024 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACB1115DCD3710009E024 /* AddressBook.framework */; };
+		CE2ACB1615DCD92A0009E024 /* FriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */; };
+		CE2ACB1715DCD92A0009E024 /* FriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +98,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0FA44E15DCEE8400E2574B /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		CE0FA44F15DCEE8400E2574B /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		CE0FA45015DCEE8400E2574B /* WaitOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitOverlay.h; sourceTree = "<group>"; };
+		CE0FA45115DCEE8400E2574B /* WaitOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitOverlay.m; sourceTree = "<group>"; };
+		CE0FA45415DCFD3B00E2574B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		CE0FA45515DCFD3B00E2574B /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		CE0FA45615DCFD3B00E2574B /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		CE2AC9CE15DC9B940009E024 /* avatarSyncor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = avatarSyncor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2AC9D215DC9B940009E024 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE2AC9D415DC9B940009E024 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +214,26 @@
 		CE2ACADB15DCB8010009E024 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CE2ACADD15DCB81D0009E024 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CE2ACADF15DCB83C0009E024 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE2ACAEE15DCC6F90009E024 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CE2ACAF715DCCEBF0009E024 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		CE2ACAF815DCCEBF0009E024 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
+		CE2ACAFA15DCCEBF0009E024 /* BaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
+		CE2ACAFB15DCCEBF0009E024 /* BaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
+		CE2ACAFC15DCCEBF0009E024 /* ControllerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerConstants.h; sourceTree = "<group>"; };
+		CE2ACB0015DCCEBF0009E024 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		CE2ACB0115DCCEBF0009E024 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		CE2ACB0315DCCEBF0009E024 /* SinaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaRequest.h; sourceTree = "<group>"; };
+		CE2ACB0415DCCEBF0009E024 /* SinaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaRequest.m; sourceTree = "<group>"; };
+		CE2ACB0515DCCEBF0009E024 /* SinaSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaSDKManager.h; sourceTree = "<group>"; };
+		CE2ACB0615DCCEBF0009E024 /* SinaSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaSDKManager.m; sourceTree = "<group>"; };
+		CE2ACB0815DCCEBF0009E024 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
+		CE2ACB0915DCCEBF0009E024 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
+		CE2ACB1115DCD3710009E024 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CE2ACB1315DCD92A0009E024 /* FriendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewCell.h; sourceTree = "<group>"; };
+		CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewCell.m; sourceTree = "<group>"; };
+		CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2ACB1215DCD3710009E024 /* AddressBook.framework in Frameworks */,
 				CE2ACAE015DCB83C0009E024 /* MapKit.framework in Frameworks */,
 				CE2ACADE15DCB81D0009E024 /* ImageIO.framework in Frameworks */,
 				CE2ACADC15DCB8020009E024 /* Security.framework in Frameworks */,
@@ -211,12 +254,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0FA45915DCFD4100E2574B /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FA45415DCFD3B00E2574B /* SettingViewController.h */,
+				CE0FA45515DCFD3B00E2574B /* SettingViewController.m */,
+				CE0FA45615DCFD3B00E2574B /* SettingViewController.xib */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
 		CE2AC9C315DC9B940009E024 = {
 			isa = PBXGroup;
 			children = (
-				CE2ACADF15DCB83C0009E024 /* MapKit.framework */,
-				CE2ACADD15DCB81D0009E024 /* ImageIO.framework */,
-				CE2ACADB15DCB8010009E024 /* Security.framework */,
+				CE2ACB1115DCD3710009E024 /* AddressBook.framework */,
 				CE2AC9D815DC9B940009E024 /* avatarSyncor */,
 				CE2AC9D115DC9B940009E024 /* Frameworks */,
 				CE2AC9CF15DC9B940009E024 /* Products */,
@@ -236,6 +287,9 @@
 		CE2AC9D115DC9B940009E024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2ACADF15DCB83C0009E024 /* MapKit.framework */,
+				CE2ACADD15DCB81D0009E024 /* ImageIO.framework */,
+				CE2ACADB15DCB8010009E024 /* Security.framework */,
 				CE2AC9D215DC9B940009E024 /* UIKit.framework */,
 				CE2AC9D415DC9B940009E024 /* Foundation.framework */,
 				CE2AC9D615DC9B940009E024 /* CoreGraphics.framework */,
@@ -281,12 +335,16 @@
 		CE2ACA0615DC9CC80009E024 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FA45915DCFD4100E2574B /* setting */,
 				CE2ACA1C15DCB4760009E024 /* common */,
 				CE2ACA1915DC9EE20009E024 /* SinaFriends */,
 				CE2ACA1815DC9ED80009E024 /* LocalFriends */,
 				CE2ACA0915DC9CC80009E024 /* RootTabViewController.h */,
 				CE2ACA0A15DC9CC80009E024 /* RootTabViewController.m */,
 				CE2ACA0B15DC9CC80009E024 /* RootTabViewController.xib */,
+				CE2ACAEE15DCC6F90009E024 /* LoginViewController.h */,
+				CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */,
+				CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -294,6 +352,13 @@
 		CE2ACA1215DC9CD00009E024 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE2ACAF715DCCEBF0009E024 /* AddressBookManager.h */,
+				CE2ACAF815DCCEBF0009E024 /* AddressBookManager.m */,
+				CE2ACAF915DCCEBF0009E024 /* Common */,
+				CE2ACB0015DCCEBF0009E024 /* DataManager.h */,
+				CE2ACB0115DCCEBF0009E024 /* DataManager.m */,
+				CE2ACB0215DCCEBF0009E024 /* Sina */,
+				CE2ACB0715DCCEBF0009E024 /* Utility */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -321,6 +386,10 @@
 		CE2ACA1C15DCB4760009E024 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FA44E15DCEE8400E2574B /* iToast.h */,
+				CE0FA44F15DCEE8400E2574B /* iToast.m */,
+				CE0FA45015DCEE8400E2574B /* WaitOverlay.h */,
+				CE0FA45115DCEE8400E2574B /* WaitOverlay.m */,
 				CE2ACAC415DCB6B10009E024 /* ViewHelper.h */,
 				CE2ACAC515DCB6B10009E024 /* ViewHelper.m */,
 				CE2ACA2115DCB4BC0009E024 /* UIImage+Scale.h */,
@@ -328,6 +397,9 @@
 				CE2ACA1D15DCB4760009E024 /* CustomUITabBarItem.h */,
 				CE2ACA1E15DCB4760009E024 /* CustomUITabBarItem.m */,
 				CE2ACA1F15DCB4760009E024 /* ViewConstants.h */,
+				CE2ACB1315DCD92A0009E024 /* FriendViewCell.h */,
+				CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */,
+				CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -484,6 +556,36 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		CE2ACAF915DCCEBF0009E024 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE2ACAFA15DCCEBF0009E024 /* BaseManager.h */,
+				CE2ACAFB15DCCEBF0009E024 /* BaseManager.m */,
+				CE2ACAFC15DCCEBF0009E024 /* ControllerConstants.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE2ACB0215DCCEBF0009E024 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				CE2ACB0315DCCEBF0009E024 /* SinaRequest.h */,
+				CE2ACB0415DCCEBF0009E024 /* SinaRequest.m */,
+				CE2ACB0515DCCEBF0009E024 /* SinaSDKManager.h */,
+				CE2ACB0615DCCEBF0009E024 /* SinaSDKManager.m */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		CE2ACB0715DCCEBF0009E024 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE2ACB0815DCCEBF0009E024 /* ChineseToPinyin.h */,
+				CE2ACB0915DCCEBF0009E024 /* ChineseToPinyin.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,6 +679,9 @@
 				CE2ACA9115DCB6740009E024 /* logo@2x.png in Resources */,
 				CE2ACA9B15DCB6740009E024 /* WBAuthorizeWebView.xib in Resources */,
 				CE2ACABB15DCB6820009E024 /* .gitignore in Resources */,
+				CE2ACAF215DCC6FA0009E024 /* LoginViewController.xib in Resources */,
+				CE2ACB1715DCD92A0009E024 /* FriendViewCell.xib in Resources */,
+				CE0FA45815DCFD3C00E2574B /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +724,17 @@
 				CE2ACAC215DCB6820009E024 /* UIButton+WebCache.m in Sources */,
 				CE2ACAC315DCB6820009E024 /* UIImageView+WebCache.m in Sources */,
 				CE2ACAC615DCB6B10009E024 /* ViewHelper.m in Sources */,
+				CE2ACAF115DCC6FA0009E024 /* LoginViewController.m in Sources */,
+				CE2ACB0A15DCCEBF0009E024 /* AddressBookManager.m in Sources */,
+				CE2ACB0B15DCCEBF0009E024 /* BaseManager.m in Sources */,
+				CE2ACB0D15DCCEBF0009E024 /* DataManager.m in Sources */,
+				CE2ACB0E15DCCEBF0009E024 /* SinaRequest.m in Sources */,
+				CE2ACB0F15DCCEBF0009E024 /* SinaSDKManager.m in Sources */,
+				CE2ACB1015DCCEBF0009E024 /* ChineseToPinyin.m in Sources */,
+				CE2ACB1615DCD92A0009E024 /* FriendViewCell.m in Sources */,
+				CE0FA45215DCEE8400E2574B /* iToast.m in Sources */,
+				CE0FA45315DCEE8400E2574B /* WaitOverlay.m in Sources */,
+				CE0FA45715DCFD3C00E2574B /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

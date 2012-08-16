@@ -263,4 +263,9 @@ static BUIFont * instance;
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
+
++ (NSString *)getUserUid
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:USERDEFAULT_USER_UID];
+}
 @end

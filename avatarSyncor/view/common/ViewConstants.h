@@ -53,4 +53,9 @@
 
 #define SYSTEM_VERSION_LESS_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
+
+#define K_NOTIFICATION_SHOWWAITOVERLAY  @"K_NOTIFICATION_SHOWWAITOVERLAY"
+#define K_NOTIFICATION_HIDEWAITOVERLAY  @"K_NOTIFICATION_HIDEWAITOVERLAY"
+
+#define USERDEFAULT_USER_UID @"USERDEFAULT_USER_UID"
 #endif

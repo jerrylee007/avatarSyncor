@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocalFriendsViewController : UIViewController
+@interface LocalFriendsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property(nonatomic, retain) IBOutlet UITableView * friendsTableView;
 
 @end
