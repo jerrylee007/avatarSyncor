@@ -85,6 +85,7 @@
 		CE2ACB1215DCD3710009E024 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACB1115DCD3710009E024 /* AddressBook.framework */; };
 		CE2ACB1615DCD92A0009E024 /* FriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */; };
 		CE2ACB1715DCD92A0009E024 /* FriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */; };
+		CE3CE28915DE4C6A00AC6608 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		CE2ACB1315DCD92A0009E024 /* FriendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewCell.h; sourceTree = "<group>"; };
 		CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewCell.m; sourceTree = "<group>"; };
 		CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendViewCell.xib; sourceTree = "<group>"; };
+		CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +269,6 @@
 		CE2AC9C315DC9B940009E024 = {
 			isa = PBXGroup;
 			children = (
-				CE2ACB1115DCD3710009E024 /* AddressBook.framework */,
 				CE2AC9D815DC9B940009E024 /* avatarSyncor */,
 				CE2AC9D115DC9B940009E024 /* Frameworks */,
 				CE2AC9CF15DC9B940009E024 /* Products */,
@@ -287,6 +288,7 @@
 		CE2AC9D115DC9B940009E024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2ACB1115DCD3710009E024 /* AddressBook.framework */,
 				CE2ACADF15DCB83C0009E024 /* MapKit.framework */,
 				CE2ACADD15DCB81D0009E024 /* ImageIO.framework */,
 				CE2ACADB15DCB8010009E024 /* Security.framework */,
@@ -300,6 +302,7 @@
 		CE2AC9D815DC9B940009E024 /* avatarSyncor */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CE28615DE4C6A00AC6608 /* model */,
 				CE2ACA1215DC9CD00009E024 /* controller */,
 				CE2ACA0615DC9CC80009E024 /* view */,
 				CE2AC9FD15DC9CC20009E024 /* res */,
@@ -586,6 +589,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		CE3CE28615DE4C6A00AC6608 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -735,6 +746,7 @@
 				CE0FA45215DCEE8400E2574B /* iToast.m in Sources */,
 				CE0FA45315DCEE8400E2574B /* WaitOverlay.m in Sources */,
 				CE0FA45715DCFD3C00E2574B /* SettingViewController.m in Sources */,
+				CE3CE28915DE4C6A00AC6608 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,7 +811,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -816,7 +828,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -867,6 +879,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */,
+			);
+			currentVersion = CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE2AC9C515DC9B940009E024 /* Project object */;
 }

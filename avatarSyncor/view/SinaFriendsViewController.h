@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SinaFriendsViewController : UIViewController
+@interface SinaFriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, retain) IBOutlet UITableView * sinaFriendsTableView;
 @end

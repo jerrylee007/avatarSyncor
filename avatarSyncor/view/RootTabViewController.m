@@ -94,7 +94,7 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
     NSAssert([viewController isKindOfClass:[UINavigationController class]],@"viewController should be UINavigationController");
-//    UINavigationController * navController = (UINavigationController*)viewController;
+    UINavigationController * navController = (UINavigationController*)viewController;
 //    [navController popToRootViewControllerAnimated:NO];
 //    // when clicked HomeView, it should be turn to home view.
 //    if (![[BSDKManager sharedManager] isLogin] && !([navController.topViewController isKindOfClass:[HomeViewController class]] || [navController.topViewController isKindOfClass:[CategoryViewController class]])) {
@@ -114,7 +114,7 @@
 //        [self startMyshowAction];
 //        return NO;
 //    }
-    if ([viewController isKindOfClass:[SinaFriendsViewController class]] && ![[SinaSDKManager sharedManager] isLogin])
+    if ([navController.topViewController isKindOfClass:[SinaFriendsViewController class]] && ![[SinaSDKManager sharedManager] isLogin])
     {
         LoginViewController * loginViewController = [[[LoginViewController alloc] initWithNibName:nil bundle:nil] autorelease];
         

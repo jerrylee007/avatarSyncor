@@ -54,6 +54,7 @@
 {
     [url release], url = nil;
     [httpMethod release], httpMethod = nil;
+
     [params release], params = nil;
     [httpHeaderFields release], httpHeaderFields = nil;
     

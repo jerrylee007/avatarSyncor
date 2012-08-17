@@ -69,6 +69,7 @@
         [[SinaSDKManager sharedManager] loginWithDoneCallback:^(LOGIN_STATUS status) {
             NSLog(@"Sina SDK login done, status:%d", status);
             if (status == LOGIN_STATUS_SUCCESS) {
+                [self dismissModalViewControllerAnimated:YES];
                 [[iToast makeText:@"亲，认证成功了！"] show];
                 
                 [[SinaSDKManager sharedManager] sendWeiBoWithText:@"我刚刚用了<Avatar达人>同步sina微博好友的头像到iPhone联系人，很方便哦，你也试试吧! 下载地址:http://11232.com" image:nil doneCallback:^(AIO_STATUS status, NSDictionary *data) {

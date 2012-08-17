@@ -91,6 +91,7 @@ static SinaSDKManager *sharedInstance;
                                                    httpHeaderFields:httpHeaderFields
                                                        doneCallback:callback];
     [self addRequest:sinaRequest];
+//    [sinaRequest start];
     [sinaRequest release];
 }
 
@@ -129,8 +130,8 @@ static SinaSDKManager *sharedInstance;
 
     [params setObject:uid forKey:@"uid"];
     
-    [self sendRequestWithMethodName:@"friendships/friends.json" 
-                         httpMethod:@"POST" 
+    [self sendRequestWithMethodName:@"users/show.json" 
+                         httpMethod:@"GET" 
                              params:params 
                        postDataType:kWBRequestPostDataTypeNormal
                    httpHeaderFields:nil
@@ -152,11 +153,11 @@ static SinaSDKManager *sharedInstance;
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:2];
     
 	[params setObject:cursor forKey:@"cursor"];
-    [params setObject:[NSNumber numberWithInt:count] forKey:@"count"];
+    [params setObject:[NSString stringWithFormat:@"%d", count] forKey:@"count"];
     [params setObject:uid forKey:@"uid"];
     
     [self sendRequestWithMethodName:@"friendships/friends.json" 
-                         httpMethod:@"POST" 
+                         httpMethod:@"GET" 
                              params:params 
                        postDataType:kWBRequestPostDataTypeNormal
                    httpHeaderFields:nil

@@ -266,6 +266,6 @@ static BUIFont * instance;
 
 + (NSString *)getUserUid
 {
-    return [[NSUserDefaults standardUserDefaults] valueForKey:USERDEFAULT_USER_UID];
+    return [[[NSUserDefaults standardUserDefaults] valueForKey:USERDEFAULT_USER_UID] stringValue];
 }
 @end
