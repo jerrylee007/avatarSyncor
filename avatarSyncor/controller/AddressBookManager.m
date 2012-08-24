@@ -17,6 +17,7 @@
 #import <AddressBook/AddressBook.h>
 #import "DataManager.h"
 #import "ViewConstants.h"
+#import "UIImageView+WebCache.h"
 //#import "DataConstants.h"
 //#import "DataHelper.h"
 //#import "SDKHelper.h"
@@ -404,6 +405,18 @@ static void ABChangeCallback(ABAddressBookRef addressBook, CFDictionaryRef info,
     [context release];
 
     [self startABChangeListener];
+}
+
+- (void)updateABRecord:(ABRecordID)record withAvatarUrl:(NSString *)url
+{
+    UIImageView * fackImageView = [[UIImageView alloc] init];
+    
+    [fackImageView setImageWithURL:[NSURL URLWithString:url] success:^(UIImage *image) {
+        [self updateABRecord:record withAvatarData:UIImageJPEGRepresentation(image, 1.0)];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (NSArray*)getAllABRecordIds {

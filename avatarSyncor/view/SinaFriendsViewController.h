@@ -11,4 +11,5 @@
 @interface SinaFriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) IBOutlet UITableView * sinaFriendsTableView;
+
 @end

@@ -85,8 +85,33 @@
 		CE2ACB1215DCD3710009E024 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACB1115DCD3710009E024 /* AddressBook.framework */; };
 		CE2ACB1615DCD92A0009E024 /* FriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */; };
 		CE2ACB1715DCD92A0009E024 /* FriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */; };
-		CE3CE28915DE4C6A00AC6608 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */; };
+		CE3CE2CE15DE8DAF00AC6608 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3CE2CD15DE8DAF00AC6608 /* CoreData.framework */; };
+		CE3CE2D115DE8E1000AC6608 /* avatarSyncor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE2CF15DE8E1000AC6608 /* avatarSyncor.xcdatamodeld */; };
+		CE3CE2ED15E27F0B00AC6608 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE2EC15E27F0B00AC6608 /* CoreDataManager.m */; };
+		CE3CE38315E6219800AC6608 /* NativeFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE38215E6219800AC6608 /* NativeFriend.m */; };
+		CE3CE38615E62BEB00AC6608 /* SinaFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE38515E62BEB00AC6608 /* SinaFriend.m */; };
+		CE3CE38A15E62F7400AC6608 /* FriendMergeViewContriller.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE38815E62F7400AC6608 /* FriendMergeViewContriller.m */; };
+		CE3CE38B15E62F7400AC6608 /* FriendMergeViewContriller.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE38915E62F7400AC6608 /* FriendMergeViewContriller.xib */; };
+		CE3CE39015E631F500AC6608 /* MergeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE38E15E631F400AC6608 /* MergeViewCell.m */; };
+		CE3CE39115E631F500AC6608 /* MergeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE38F15E631F400AC6608 /* MergeViewCell.xib */; };
+		CE3CE3A815E6692D00AC6608 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE3A615E6692D00AC6608 /* Localizable.strings */; };
+		CE43D0D915E67CD9007EB458 /* FriendsSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */; };
+		CE43D0DA15E67CD9007EB458 /* FriendsSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */; };
+		CE43D0DF15E67DB4007EB458 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */; };
+		CE43D0E015E67DB4007EB458 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		CE3CE3A215E6683D00AC6608 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = text.plist.strings;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyStrings\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		CE2ACAA315DCB6750009E024 /* PBXContainerItemProxy */ = {
@@ -235,7 +260,28 @@
 		CE2ACB1315DCD92A0009E024 /* FriendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewCell.h; sourceTree = "<group>"; };
 		CE2ACB1415DCD92A0009E024 /* FriendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewCell.m; sourceTree = "<group>"; };
 		CE2ACB1515DCD92A0009E024 /* FriendViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendViewCell.xib; sourceTree = "<group>"; };
-		CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE3CE2CD15DE8DAF00AC6608 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE3CE2D015DE8E1000AC6608 /* avatarSyncor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = avatarSyncor.xcdatamodel; sourceTree = "<group>"; };
+		CE3CE2EB15E27F0B00AC6608 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		CE3CE2EC15E27F0B00AC6608 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		CE3CE38115E6219800AC6608 /* NativeFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFriend.h; sourceTree = "<group>"; };
+		CE3CE38215E6219800AC6608 /* NativeFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeFriend.m; sourceTree = "<group>"; };
+		CE3CE38415E62BEB00AC6608 /* SinaFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaFriend.h; sourceTree = "<group>"; };
+		CE3CE38515E62BEB00AC6608 /* SinaFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaFriend.m; sourceTree = "<group>"; };
+		CE3CE38715E62F7300AC6608 /* FriendMergeViewContriller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendMergeViewContriller.h; sourceTree = "<group>"; };
+		CE3CE38815E62F7400AC6608 /* FriendMergeViewContriller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendMergeViewContriller.m; sourceTree = "<group>"; };
+		CE3CE38915E62F7400AC6608 /* FriendMergeViewContriller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendMergeViewContriller.xib; sourceTree = "<group>"; };
+		CE3CE38D15E631F400AC6608 /* MergeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeViewCell.h; sourceTree = "<group>"; };
+		CE3CE38E15E631F400AC6608 /* MergeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeViewCell.m; sourceTree = "<group>"; };
+		CE3CE38F15E631F400AC6608 /* MergeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeViewCell.xib; sourceTree = "<group>"; };
+		CE3CE3A715E6692D00AC6608 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE43D0D615E67CD9007EB458 /* FriendsSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsSelectionViewController.h; sourceTree = "<group>"; };
+		CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsSelectionViewController.m; sourceTree = "<group>"; };
+		CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsSelectionViewController.xib; sourceTree = "<group>"; };
+		CE43D0DB15E67D1A007EB458 /* FriendsSelectionViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsSelectionViewControllerDelegate.h; sourceTree = "<group>"; };
+		CE43D0DC15E67DB4007EB458 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3CE2CE15DE8DAF00AC6608 /* CoreData.framework in Frameworks */,
 				CE2ACB1215DCD3710009E024 /* AddressBook.framework in Frameworks */,
 				CE2ACAE015DCB83C0009E024 /* MapKit.framework in Frameworks */,
 				CE2ACADE15DCB81D0009E024 /* ImageIO.framework in Frameworks */,
@@ -288,6 +335,7 @@
 		CE2AC9D115DC9B940009E024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CE2CD15DE8DAF00AC6608 /* CoreData.framework */,
 				CE2ACB1115DCD3710009E024 /* AddressBook.framework */,
 				CE2ACADF15DCB83C0009E024 /* MapKit.framework */,
 				CE2ACADD15DCB81D0009E024 /* ImageIO.framework */,
@@ -316,6 +364,7 @@
 		CE2AC9D915DC9B940009E024 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CE3A615E6692D00AC6608 /* Localizable.strings */,
 				CE2AC9DA15DC9B940009E024 /* avatarSyncor-Info.plist */,
 				CE2AC9DB15DC9B940009E024 /* InfoPlist.strings */,
 				CE2AC9DE15DC9B940009E024 /* main.m */,
@@ -338,6 +387,7 @@
 		CE2ACA0615DC9CC80009E024 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CE38C15E62F7900AC6608 /* merge */,
 				CE0FA45915DCFD4100E2574B /* setting */,
 				CE2ACA1C15DCB4760009E024 /* common */,
 				CE2ACA1915DC9EE20009E024 /* SinaFriends */,
@@ -362,6 +412,8 @@
 				CE2ACB0115DCCEBF0009E024 /* DataManager.m */,
 				CE2ACB0215DCCEBF0009E024 /* Sina */,
 				CE2ACB0715DCCEBF0009E024 /* Utility */,
+				CE3CE2EB15E27F0B00AC6608 /* CoreDataManager.h */,
+				CE3CE2EC15E27F0B00AC6608 /* CoreDataManager.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -379,6 +431,13 @@
 		CE2ACA1915DC9EE20009E024 /* SinaFriends */ = {
 			isa = PBXGroup;
 			children = (
+				CE43D0DC15E67DB4007EB458 /* FriendsViewController.h */,
+				CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */,
+				CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */,
+				CE43D0DB15E67D1A007EB458 /* FriendsSelectionViewControllerDelegate.h */,
+				CE43D0D615E67CD9007EB458 /* FriendsSelectionViewController.h */,
+				CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */,
+				CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */,
 				CE2AC9F515DC9B940009E024 /* SinaFriendsViewController.xib */,
 				CE2ACA0C15DC9CC80009E024 /* SinaFriendsViewController.h */,
 				CE2ACA0D15DC9CC80009E024 /* SinaFriendsViewController.m */,
@@ -592,9 +651,26 @@
 		CE3CE28615DE4C6A00AC6608 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */,
+				CE3CE2CF15DE8E1000AC6608 /* avatarSyncor.xcdatamodeld */,
+				CE3CE38415E62BEB00AC6608 /* SinaFriend.h */,
+				CE3CE38515E62BEB00AC6608 /* SinaFriend.m */,
+				CE3CE38115E6219800AC6608 /* NativeFriend.h */,
+				CE3CE38215E6219800AC6608 /* NativeFriend.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		CE3CE38C15E62F7900AC6608 /* merge */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CE38D15E631F400AC6608 /* MergeViewCell.h */,
+				CE3CE38E15E631F400AC6608 /* MergeViewCell.m */,
+				CE3CE38F15E631F400AC6608 /* MergeViewCell.xib */,
+				CE3CE38715E62F7300AC6608 /* FriendMergeViewContriller.h */,
+				CE3CE38815E62F7400AC6608 /* FriendMergeViewContriller.m */,
+				CE3CE38915E62F7400AC6608 /* FriendMergeViewContriller.xib */,
+			);
+			name = merge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,6 +685,7 @@
 				CE2AC9CC15DC9B940009E024 /* Resources */,
 			);
 			buildRules = (
+				CE3CE3A215E6683D00AC6608 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -693,6 +770,11 @@
 				CE2ACAF215DCC6FA0009E024 /* LoginViewController.xib in Resources */,
 				CE2ACB1715DCD92A0009E024 /* FriendViewCell.xib in Resources */,
 				CE0FA45815DCFD3C00E2574B /* SettingViewController.xib in Resources */,
+				CE3CE38B15E62F7400AC6608 /* FriendMergeViewContriller.xib in Resources */,
+				CE3CE39115E631F500AC6608 /* MergeViewCell.xib in Resources */,
+				CE3CE3A815E6692D00AC6608 /* Localizable.strings in Resources */,
+				CE43D0DA15E67CD9007EB458 /* FriendsSelectionViewController.xib in Resources */,
+				CE43D0E015E67DB4007EB458 /* FriendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +828,14 @@
 				CE0FA45215DCEE8400E2574B /* iToast.m in Sources */,
 				CE0FA45315DCEE8400E2574B /* WaitOverlay.m in Sources */,
 				CE0FA45715DCFD3C00E2574B /* SettingViewController.m in Sources */,
-				CE3CE28915DE4C6A00AC6608 /* Model.xcdatamodeld in Sources */,
+				CE3CE2D115DE8E1000AC6608 /* avatarSyncor.xcdatamodeld in Sources */,
+				CE3CE2ED15E27F0B00AC6608 /* CoreDataManager.m in Sources */,
+				CE3CE38315E6219800AC6608 /* NativeFriend.m in Sources */,
+				CE3CE38615E62BEB00AC6608 /* SinaFriend.m in Sources */,
+				CE3CE38A15E62F7400AC6608 /* FriendMergeViewContriller.m in Sources */,
+				CE3CE39015E631F500AC6608 /* MergeViewCell.m in Sources */,
+				CE43D0D915E67CD9007EB458 /* FriendsSelectionViewController.m in Sources */,
+				CE43D0DF15E67DB4007EB458 /* FriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +874,14 @@
 				CE2ACA4515DCB6740009E024 /* en */,
 				CE2ACA7715DCB6740009E024 /* zh-Hans */,
 				CE2ACA7815DCB6740009E024 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CE3CE3A615E6692D00AC6608 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3CE3A715E6692D00AC6608 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -881,13 +978,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE3CE28715DE4C6A00AC6608 /* Model.xcdatamodeld */ = {
+		CE3CE2CF15DE8E1000AC6608 /* avatarSyncor.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */,
+				CE3CE2D015DE8E1000AC6608 /* avatarSyncor.xcdatamodel */,
 			);
-			currentVersion = CE3CE28815DE4C6A00AC6608 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = CE3CE2D015DE8E1000AC6608 /* avatarSyncor.xcdatamodel */;
+			path = avatarSyncor.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

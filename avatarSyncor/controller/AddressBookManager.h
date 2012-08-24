@@ -224,6 +224,9 @@
  */
 - (void)updateABRecord:(ABRecordID)record withAvatarData:(NSData *)data;
 
+
+- (void)updateABRecord:(ABRecordID)record withAvatarUrl:(NSString *)url;
+
 ///**
 // @brief Merge contact identity (local contact) with contact dictionary from server or
 //        updates from local editing.

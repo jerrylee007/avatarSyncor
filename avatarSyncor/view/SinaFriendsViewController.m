@@ -14,6 +14,10 @@
 #import "iToast.h"
 #import "FriendViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "SinaFriend.h"
+#import "DataManager.h"
+#import "CoreDataManager.h"
+#import "FriendMergeViewContriller.h"
 
 #define K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS  @"K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS"
 #define K_NOTIFICATION_RETRIEVE_FRIENDS_DONE  @"K_NOTIFICATION_RETRIEVE_FRIENDS_DONE"
@@ -35,6 +39,9 @@
 @property (retain, nonatomic) id observerForRetrieveProgress;
 @property (retain, nonatomic) id observerForRetrieveDone;
 
+
+- (void)onFriendsRetrievesDone;
+
 @end
 
 @implementation SinaFriendsViewController
@@ -50,7 +57,6 @@
 @synthesize observerForRetrieveProgress = _observerForRetrieveProgress;
 
 @synthesize sinaFriendsTableView = _sinaFriendsTableView;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,6 +85,35 @@
     [super release];
 }
 
+
+- (void)onFriendsRetrievesDone
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_RETRIEVE_FRIENDS_DONE object:self userInfo:nil];
+    
+    for (NSDictionary * sinaFriendDict in self.sinaFriends) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid == %@",
+                                  [[sinaFriendDict objectForKey:@"id"] stringValue]];
+        SinaFriend * sinaFriend = (SinaFriend*)[[CoreDataManager sharedManager] fetchEntity:@"SinaFriend" withPredicate:predicate prefetchRelations:nil context:[CoreDataManager sharedManager].managedObjectContext];
+        
+        if (sinaFriend == nil) {
+            [SinaFriend sinaFriendWithDict:sinaFriendDict inContext:[CoreDataManager sharedManager].managedObjectContext];
+        }
+        else
+        {
+            [SinaFriend updateSinaFriend:sinaFriend withDict:sinaFriendDict];
+        }
+    }
+    
+    [[CoreDataManager sharedManager] saveMainContextChanges];
+    
+    // Start Merge view
+    FriendMergeViewContriller * friendMergeViewController = [[[FriendMergeViewContriller alloc] initWithNibName:nil bundle:nil] autorelease];
+    
+    UINavigationController * navController= [[UINavigationController alloc] initWithRootViewController: friendMergeViewController];
+    [self presentModalViewController: navController animated:YES];
+    [navController release];
+}
+
 - (void)retrieveAllFriends
 {
     __block NSInteger friendsCountPerRequest = 0;
@@ -91,7 +126,7 @@
         [self.sinaFriends addObjectsFromArray:[data objectForKey:@"users"]];
         
         if ([_next_cousor isEqualToString:@"0"]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_RETRIEVE_FRIENDS_DONE object:self userInfo:nil];
+            [self onFriendsRetrievesDone];
         }
         else
         {
@@ -108,10 +143,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    [self.sinaFriendsTableView setHidden:YES];
+
     [self.sinaFriendsTableView setDelegate:self];
     [self.sinaFriendsTableView setDataSource:self];
+    
+    
+    [self.sinaFriendsTableView setHidden:YES];
     
     __block UIProgressView * loadingProgressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
     [loadingProgressView setFrame:CGRectMake((SCREEN_WIDTH - UIPROGRESSVIEW_WIDTH)/2, 100.0, UIPROGRESSVIEW_WIDTH, UIPROGRESSVIEW_HEIGHT)];
@@ -130,23 +167,24 @@
             [[iToast makeText:@"获取信息失败，请再试一次!"] show];
         }
     }];
-
+    
     self.observerForRetrieveProgress = [[NSNotificationCenter defaultCenter]
-                              addObserverForName:K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS
-                              object:nil
-                              queue:nil
-                              usingBlock:^(NSNotification *note) {
-                                  [loadingProgressView setProgress:_friendsRetrievedCount/_friendsTotalCount];
-                              }];
-    self.observerForRetrieveDone = [[NSNotificationCenter defaultCenter]
-                                        addObserverForName:K_NOTIFICATION_RETRIEVE_FRIENDS_DONE
+                                        addObserverForName:K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS
                                         object:nil
                                         queue:nil
                                         usingBlock:^(NSNotification *note) {
-                                            [loadingProgressView removeFromSuperview];
-                                            [self.sinaFriendsTableView setHidden:NO];
-                                            [self.sinaFriendsTableView reloadData];
+                                            [loadingProgressView setProgress:_friendsRetrievedCount/_friendsTotalCount];
                                         }];
+    self.observerForRetrieveDone = [[NSNotificationCenter defaultCenter]
+                                    addObserverForName:K_NOTIFICATION_RETRIEVE_FRIENDS_DONE
+                                    object:nil
+                                    queue:nil
+                                    usingBlock:^(NSNotification *note) {
+                                        [loadingProgressView removeFromSuperview];
+                                        //                                            [self.sinaFriendsTableView setHidden:NO];
+                                        //                                            [self.sinaFriendsTableView reloadData];
+                                    }];
+
 }
 
 - (void)viewDidUnload
@@ -184,6 +222,14 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void) onBackButtonClicked
+{
+    if (![self.navigationController popViewControllerAnimated:YES])
+    {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark Table view delegate and data source

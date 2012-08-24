@@ -10,6 +10,9 @@
 #import "AddressBookManager.h"
 #import "DataManager.h"
 #import "FriendViewCell.h"
+#import "NativeFriend.h"
+#import "CoreDataManager.h"
+#import "AddressBookManager.h"
 
 @interface LocalFriendsViewController ()
 
@@ -54,6 +57,33 @@
     if (_localFriends == nil) {
         self.localFriends = [[DataManager sharedManager].abMannager getAllABRecordIds];
     }
+    
+//    NSArray *list = [[CoreDataManager sharedManager] fetchAllEntities:@"NativeFriend" 
+//                                             withPredicate:[NSPredicate predicateWithFormat: @"name beginswith 'Ke'"] 
+//                                               withSorting:nil
+//                                                fetchLimit:0
+//                                         prefetchRelations:nil 
+//                                                   context:[CoreDataManager sharedManager].managedObjectContext];
+
+    
+    for (NSNumber* recordId in self.localFriends) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"nativeid == %@",
+                                  recordId];
+        NativeFriend * nativeFriend = (NativeFriend*)[[CoreDataManager sharedManager] fetchEntity:@"NativeFriend" withPredicate:predicate prefetchRelations:nil context:[CoreDataManager sharedManager].managedObjectContext];
+        
+        if (nativeFriend == nil) {
+            [NativeFriend nativeFriendWithABRecordId:[recordId intValue] inContext:[CoreDataManager sharedManager].managedObjectContext];
+        }
+        else
+        {
+            if ([[[DataManager sharedManager].abMannager getUpdateDateForContact:[recordId intValue]] compare:nativeFriend.timestamp])
+            {
+                //TODO: record it
+            }
+        }
+    }
+    
+    [[CoreDataManager sharedManager] saveMainContextChanges];
     
     [self.friendsTableView setDelegate:self];
     [self.friendsTableView setDataSource:self];
