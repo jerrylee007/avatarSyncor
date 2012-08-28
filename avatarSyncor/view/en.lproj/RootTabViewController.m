@@ -129,12 +129,13 @@
 
 - (void)initLocalizedString
 {
-    NSArray* homeArray = [NSArray arrayWithObjects:@"本地好友",@"本地好友",nil];
-    NSArray* categoryArray = [NSArray arrayWithObjects:@"新浪好友",@"新浪好友",nil];
-    NSArray* cameraShareArray = [NSArray arrayWithObjects:@"设置",@"设置",nil];
-    NSArray* localizedStringsArray = [NSArray arrayWithObjects:homeArray, categoryArray, cameraShareArray, nil];
+    NSArray* nativeArray = [NSArray arrayWithObjects:NSLocalizedString(@"tab_native1", @"tab_native1"),NSLocalizedString(@"tab_native1", @"tab_native1"),nil];
+    NSArray* sinaArray = [NSArray arrayWithObjects:NSLocalizedString(@"tab_sina", @"tab_sina"),NSLocalizedString(@"tab_sina", @"tab_sina"),nil];
+    NSArray* settingArray = [NSArray arrayWithObjects:NSLocalizedString(@"tab_setting", @"tab_setting"),NSLocalizedString(@"tab_setting", @"tab_setting"),nil];
     
-    NSArray* tabbarIconNamesArray = [NSArray arrayWithObjects:@"top_icon_pressed", @"friend_icon_pressed", @"tabbar_setting_icon", nil];
+    NSArray* localizedStringsArray = [NSArray arrayWithObjects:nativeArray, sinaArray, settingArray, nil];
+    
+    NSArray* tabbarIconNamesArray = [NSArray arrayWithObjects:@"tabbar_home_icon", @"tabbar_hot_icon", @"tabbar_show_icon", @"tabbar_search_icon", @"tabbar_mine_icon", nil];
     
     NSInteger index = 0;
     for (UINavigationController* navigation in [self customizableViewControllers]){

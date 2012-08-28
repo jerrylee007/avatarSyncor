@@ -25,13 +25,13 @@
 #define UIPROGRESSVIEW_WIDTH    (240.0)
 #define UIPROGRESSVIEW_HEIGHT    (50.0)
 
-#define MAX_FRIENDS_COUNT_PER_REQUEST   (1)
+#define MAX_FRIENDS_COUNT_PER_REQUEST   (20)
 
 @interface SinaFriendsViewController ()
 @property(nonatomic, assign)  processDoneWithDictBlock getFriendDoneCallback;
 
-@property(nonatomic, assign)  NSInteger friendsTotalCount;
-@property(nonatomic, assign)  NSInteger friendsRetrievedCount;
+@property(nonatomic, assign)  CGFloat friendsTotalCount;
+@property(nonatomic, assign)  CGFloat friendsRetrievedCount;
 @property(nonatomic, retain)  NSString * next_cousor;
 
 @property(nonatomic, retain)  NSMutableArray * sinaFriends;
@@ -62,8 +62,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
 }
@@ -121,19 +119,26 @@
     
     __block processDoneWithDictBlock getFriendsDoneBlock = ^(AIO_STATUS status, NSDictionary *data)
     {
-        _next_cousor = [[data objectForKey:@"next_cursor"] stringValue];
-        
-        [self.sinaFriends addObjectsFromArray:[data objectForKey:@"users"]];
-        
-        if ([_next_cousor isEqualToString:@"0"]) {
-            [self onFriendsRetrievesDone];
+        if (status == AIO_STATUS_SUCCESS) {
+            _next_cousor = [[data objectForKey:@"next_cursor"] stringValue];
+            
+            [self.sinaFriends addObjectsFromArray:[data objectForKey:@"users"]];
+            
+            if ([_next_cousor isEqualToString:@"0"]) {
+                [self onFriendsRetrievesDone];
+            }
+            else
+            {
+                _friendsRetrievedCount += friendsCountPerRequest;
+                [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS object:self userInfo:nil];
+                [self retrieveAllFriends];  
+            }
         }
         else
         {
-            _friendsRetrievedCount += friendsCountPerRequest;
-            [[NSNotificationCenter defaultCenter] postNotificationName:K_NOTIFICATION_RETRIEVE_FRIENDS_PROGRESS object:self userInfo:nil];
-            [self retrieveAllFriends];  
+            [[iToast makeText:@"好友接收失败，请重试!"] show];
         }
+
     };
     
     [[SinaSDKManager sharedManager] getFriendsOfUser:[ViewHelper getUserUid] cursor:_next_cousor count:friendsCountPerRequest doneCallback:getFriendsDoneBlock];
@@ -181,8 +186,8 @@
                                     queue:nil
                                     usingBlock:^(NSNotification *note) {
                                         [loadingProgressView removeFromSuperview];
-                                        //                                            [self.sinaFriendsTableView setHidden:NO];
-                                        //                                            [self.sinaFriendsTableView reloadData];
+                                                                                    [self.sinaFriendsTableView setHidden:NO];
+                                                                                    [self.sinaFriendsTableView reloadData];
                                     }];
 
 }
@@ -246,7 +251,7 @@
     
     NSString * imageUrl =[[self.sinaFriends objectAtIndex:[indexPath row]] objectForKey:@"profile_image_url"]; 
 
-    [cell.avatar setImageWithURL:[NSURL URLWithString:imageUrl]];
+    [cell.avatar setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"avatar_icon"]];
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

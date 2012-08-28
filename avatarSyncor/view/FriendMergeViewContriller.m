@@ -19,9 +19,8 @@
 
 #define ACTIONSHEET_MERGE_ACTION            (1)
 
-#define MERGE_ACTION_START                  @"merge_start"
-#define MERGE_ACTION_RESET                  @"merge_reset"
-#define MERGE_ACTION_REMERGE                @"merge_remerge"
+#define MERGE_ACTION_START                  @"选择新浪好友进行头像同步"
+#define MERGE_ACTION_RESET                  @"删除现有的头像同步"
 
 @interface FriendMergeViewContriller ()
 
@@ -42,7 +41,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self.navigationItem setLeftBarButtonItem:[ViewHelper getBackBarItemOfTarget:self action:@selector(onBackButtonClicked) title:NSLocalizedString(@"go_back", @"go_back")]];
+        [self.navigationItem setLeftBarButtonItem:[ViewHelper getBackBarItemOfTarget:self action:@selector(onBackButtonClicked) title:NSLocalizedString(@"返回", @"返回")]];
+        [self.navigationItem setTitle:@"同步"];
     }
     return self;
 }
@@ -120,6 +120,10 @@
     
     cell.localAvatarImageView.image = [[DataManager sharedManager].abMannager getAvatarOfContact:[nativeFriend.nativeid intValue]];
     
+    if (cell.localAvatarImageView.image == nil) {
+        cell.localAvatarImageView.image = [UIImage imageNamed:@"avatar_icon"];
+    }
+    
     if (nativeFriend.sinaFriend) {
         cell.sinaName.text = nativeFriend.sinaFriend.name;
         [cell.sinaAvatarImageView setImageWithURL:[NSURL URLWithString:nativeFriend.sinaFriend.profile_image]];
@@ -178,7 +182,7 @@
                     [navController release];
 
                 }
-                else if ([pressed isEqualToString:MERGE_ACTION_REMERGE])
+                else if ([pressed isEqualToString:MERGE_ACTION_RESET])
                 {
                     FriendsSelectionViewController * sinaFriendsSelectViewController = [[[FriendsSelectionViewController alloc] initWithNibName:nil bundle:nil] autorelease];
                     
@@ -211,9 +215,9 @@
 
     [mergeActionSheet addButtonWithTitle:MERGE_ACTION_START];        
 
-    [mergeActionSheet addButtonWithTitle:MERGE_ACTION_REMERGE];
+    [mergeActionSheet addButtonWithTitle:MERGE_ACTION_RESET];
 
-    [mergeActionSheet setDestructiveButtonIndex:[mergeActionSheet addButtonWithTitle:NSLocalizedString(@"cancel", @"cancel")]];
+    [mergeActionSheet setDestructiveButtonIndex:[mergeActionSheet addButtonWithTitle:NSLocalizedString(@"取消", @"取消")]];
     [mergeActionSheet showInView:self.view];
     
     [mergeActionSheet release];

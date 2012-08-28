@@ -14,23 +14,13 @@
 		CE2AC9D315DC9B940009E024 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D215DC9B940009E024 /* UIKit.framework */; };
 		CE2AC9D515DC9B940009E024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D415DC9B940009E024 /* Foundation.framework */; };
 		CE2AC9D715DC9B940009E024 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AC9D615DC9B940009E024 /* CoreGraphics.framework */; };
-		CE2AC9DD15DC9B940009E024 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE2AC9DB15DC9B940009E024 /* InfoPlist.strings */; };
-		CE2AC9DF15DC9B940009E024 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AC9DE15DC9B940009E024 /* main.m */; };
 		CE2AC9E315DC9B940009E024 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AC9E215DC9B940009E024 /* AppDelegate.m */; };
-		CE2AC9F415DC9B940009E024 /* LocalFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2AC9F215DC9B940009E024 /* LocalFriendsViewController.xib */; };
-		CE2AC9F715DC9B940009E024 /* SinaFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2AC9F515DC9B940009E024 /* SinaFriendsViewController.xib */; };
-		CE2ACA0215DC9CC20009E024 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2AC9FE15DC9CC20009E024 /* first.png */; };
-		CE2ACA0315DC9CC20009E024 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2AC9FF15DC9CC20009E024 /* first@2x.png */; };
-		CE2ACA0415DC9CC20009E024 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA0015DC9CC20009E024 /* second.png */; };
-		CE2ACA0515DC9CC20009E024 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA0115DC9CC20009E024 /* second@2x.png */; };
 		CE2ACA0E15DC9CC80009E024 /* LocalFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA0815DC9CC80009E024 /* LocalFriendsViewController.m */; };
-		CE2ACA0F15DC9CC80009E024 /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA0A15DC9CC80009E024 /* RootTabViewController.m */; };
 		CE2ACA1015DC9CC80009E024 /* RootTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA0B15DC9CC80009E024 /* RootTabViewController.xib */; };
 		CE2ACA1115DC9CC80009E024 /* SinaFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA0D15DC9CC80009E024 /* SinaFriendsViewController.m */; };
 		CE2ACA2015DCB4760009E024 /* CustomUITabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA1E15DCB4760009E024 /* CustomUITabBarItem.m */; };
 		CE2ACA2315DCB4BC0009E024 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA2215DCB4BC0009E024 /* UIImage+Scale.m */; };
 		CE2ACA8215DCB6740009E024 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACA4215DCB6740009E024 /* GTMBase64.m */; };
-		CE2ACA8315DCB6740009E024 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA4415DCB6740009E024 /* Localizable.strings */; };
 		CE2ACA8415DCB6740009E024 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA4815DCB6740009E024 /* bg.png */; };
 		CE2ACA8515DCB6740009E024 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA4915DCB6740009E024 /* bg@2x.png */; };
 		CE2ACA8615DCB6740009E024 /* bg_land.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACA4A15DCB6740009E024 /* bg_land.png */; };
@@ -74,7 +64,6 @@
 		CE2ACADC15DCB8020009E024 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADB15DCB8010009E024 /* Security.framework */; };
 		CE2ACADE15DCB81D0009E024 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADD15DCB81D0009E024 /* ImageIO.framework */; };
 		CE2ACAE015DCB83C0009E024 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2ACADF15DCB83C0009E024 /* MapKit.framework */; };
-		CE2ACAF115DCC6FA0009E024 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */; };
 		CE2ACAF215DCC6FA0009E024 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */; };
 		CE2ACB0A15DCCEBF0009E024 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAF815DCCEBF0009E024 /* AddressBookManager.m */; };
 		CE2ACB0B15DCCEBF0009E024 /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2ACAFB15DCCEBF0009E024 /* BaseManager.m */; };
@@ -94,11 +83,33 @@
 		CE3CE38B15E62F7400AC6608 /* FriendMergeViewContriller.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE38915E62F7400AC6608 /* FriendMergeViewContriller.xib */; };
 		CE3CE39015E631F500AC6608 /* MergeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE38E15E631F400AC6608 /* MergeViewCell.m */; };
 		CE3CE39115E631F500AC6608 /* MergeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE38F15E631F400AC6608 /* MergeViewCell.xib */; };
-		CE3CE3A815E6692D00AC6608 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE3CE3A615E6692D00AC6608 /* Localizable.strings */; };
+		CE3E6BE115E8CFC3003600EA /* avatar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD315E8CFC3003600EA /* avatar_icon.png */; };
+		CE3E6BE215E8CFC3003600EA /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD415E8CFC3003600EA /* back_btn.png */; };
+		CE3E6BE315E8CFC3003600EA /* body_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD515E8CFC3003600EA /* body_background.png */; };
+		CE3E6BE415E8CFC3003600EA /* common_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD615E8CFC3003600EA /* common_button.png */; };
+		CE3E6BE515E8CFC3003600EA /* nav_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD715E8CFC3003600EA /* nav_bar_background.png */; };
+		CE3E6BE615E8CFC3003600EA /* nav_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD815E8CFC3003600EA /* nav_button.png */; };
+		CE3E6BE715E8CFC3003600EA /* tabbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BD915E8CFC3003600EA /* tabbar_background.png */; };
+		CE3E6BE815E8CFC3003600EA /* avatar_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BDB15E8CFC3003600EA /* avatar_icon@2x.png */; };
+		CE3E6BE915E8CFC3003600EA /* back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BDC15E8CFC3003600EA /* back_btn@2x.png */; };
+		CE3E6BEA15E8CFC3003600EA /* body_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BDD15E8CFC3003600EA /* body_background@2x.png */; };
+		CE3E6BEB15E8CFC3003600EA /* common_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BDE15E8CFC3003600EA /* common_button@2x.png */; };
+		CE3E6BEC15E8CFC3003600EA /* nav_bar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BDF15E8CFC3003600EA /* nav_bar_background@2x.png */; };
+		CE3E6BED15E8CFC3003600EA /* nav_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BE015E8CFC3003600EA /* nav_button@2x.png */; };
+		CE3E6BFC15E8D5AF003600EA /* LocalFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BFB15E8D5AF003600EA /* LocalFriendsViewController.xib */; };
+		CE3E6BFE15E8D5BB003600EA /* SinaFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3E6BFD15E8D5BB003600EA /* SinaFriendsViewController.xib */; };
 		CE43D0D915E67CD9007EB458 /* FriendsSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */; };
 		CE43D0DA15E67CD9007EB458 /* FriendsSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */; };
 		CE43D0DF15E67DB4007EB458 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */; };
 		CE43D0E015E67DB4007EB458 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */; };
+		CE8D426415EC52E100122D1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8D426315EC52E100122D1A /* Localizable.strings */; };
+		CE8D426715EC53A700122D1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D426615EC53A700122D1A /* main.m */; };
+		CE8D426915EC541700122D1A /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D426815EC541700122D1A /* RootTabViewController.m */; };
+		CE8D426B15EC546D00122D1A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D426A15EC546D00122D1A /* LoginViewController.m */; };
+		CE8D426D15EC551A00122D1A /* sina_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8D426C15EC551A00122D1A /* sina_logo.png */; };
+		CE8D427115EC588A00122D1A /* top_icon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8D426F15EC588A00122D1A /* top_icon_pressed.png */; };
+		CE8D427315EC58A700122D1A /* friend_icon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8D427215EC58A600122D1A /* friend_icon_pressed.png */; };
+		CE8D427515EC594200122D1A /* tabbar_setting_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8D427415EC594200122D1A /* tabbar_setting_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -136,21 +147,11 @@
 		CE2AC9D415DC9B940009E024 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE2AC9D615DC9B940009E024 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE2AC9DA15DC9B940009E024 /* avatarSyncor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "avatarSyncor-Info.plist"; sourceTree = "<group>"; };
-		CE2AC9DC15DC9B940009E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CE2AC9DE15DC9B940009E024 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE2AC9E015DC9B940009E024 /* avatarSyncor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avatarSyncor-Prefix.pch"; sourceTree = "<group>"; };
 		CE2AC9E115DC9B940009E024 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE2AC9E215DC9B940009E024 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE2AC9F315DC9B940009E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LocalFriendsViewController.xib; sourceTree = "<group>"; };
-		CE2AC9F615DC9B940009E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SinaFriendsViewController.xib; sourceTree = "<group>"; };
-		CE2AC9FE15DC9CC20009E024 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		CE2AC9FF15DC9CC20009E024 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		CE2ACA0015DC9CC20009E024 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		CE2ACA0115DC9CC20009E024 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		CE2ACA0715DC9CC80009E024 /* LocalFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFriendsViewController.h; sourceTree = "<group>"; };
 		CE2ACA0815DC9CC80009E024 /* LocalFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFriendsViewController.m; sourceTree = "<group>"; };
-		CE2ACA0915DC9CC80009E024 /* RootTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabViewController.h; sourceTree = "<group>"; };
-		CE2ACA0A15DC9CC80009E024 /* RootTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabViewController.m; sourceTree = "<group>"; };
 		CE2ACA0B15DC9CC80009E024 /* RootTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTabViewController.xib; sourceTree = "<group>"; };
 		CE2ACA0C15DC9CC80009E024 /* SinaFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaFriendsViewController.h; sourceTree = "<group>"; };
 		CE2ACA0D15DC9CC80009E024 /* SinaFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaFriendsViewController.m; sourceTree = "<group>"; };
@@ -162,7 +163,6 @@
 		CE2ACA4115DCB6740009E024 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		CE2ACA4215DCB6740009E024 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		CE2ACA4315DCB6740009E024 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		CE2ACA4515DCB6740009E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE2ACA4815DCB6740009E024 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		CE2ACA4915DCB6740009E024 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		CE2ACA4A15DCB6740009E024 /* bg_land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_land.png; sourceTree = "<group>"; };
@@ -208,8 +208,6 @@
 		CE2ACA7415DCB6740009E024 /* WBSendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSendView.m; sourceTree = "<group>"; };
 		CE2ACA7515DCB6740009E024 /* WBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUtil.h; sourceTree = "<group>"; };
 		CE2ACA7615DCB6740009E024 /* WBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUtil.m; sourceTree = "<group>"; };
-		CE2ACA7715DCB6740009E024 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		CE2ACA7815DCB6740009E024 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CE2ACA7915DCB6740009E024 /* SinaWeiBoSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SinaWeiBoSDK-Prefix.pch"; sourceTree = "<group>"; };
 		CE2ACA7A15DCB6740009E024 /* SinaWeiBoSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiBoSDK.h; sourceTree = "<group>"; };
 		CE2ACA7B15DCB6740009E024 /* SinaWeiBoSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiBoSDK.m; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		CE2ACADD15DCB81D0009E024 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CE2ACADF15DCB83C0009E024 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE2ACAEE15DCC6F90009E024 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CE2ACAF715DCCEBF0009E024 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
 		CE2ACAF815DCCEBF0009E024 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
@@ -274,7 +271,21 @@
 		CE3CE38D15E631F400AC6608 /* MergeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeViewCell.h; sourceTree = "<group>"; };
 		CE3CE38E15E631F400AC6608 /* MergeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeViewCell.m; sourceTree = "<group>"; };
 		CE3CE38F15E631F400AC6608 /* MergeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeViewCell.xib; sourceTree = "<group>"; };
-		CE3CE3A715E6692D00AC6608 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE3E6BD315E8CFC3003600EA /* avatar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_icon.png; sourceTree = "<group>"; };
+		CE3E6BD415E8CFC3003600EA /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
+		CE3E6BD515E8CFC3003600EA /* body_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_background.png; sourceTree = "<group>"; };
+		CE3E6BD615E8CFC3003600EA /* common_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_button.png; sourceTree = "<group>"; };
+		CE3E6BD715E8CFC3003600EA /* nav_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar_background.png; sourceTree = "<group>"; };
+		CE3E6BD815E8CFC3003600EA /* nav_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_button.png; sourceTree = "<group>"; };
+		CE3E6BD915E8CFC3003600EA /* tabbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_background.png; sourceTree = "<group>"; };
+		CE3E6BDB15E8CFC3003600EA /* avatar_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_icon@2x.png"; sourceTree = "<group>"; };
+		CE3E6BDC15E8CFC3003600EA /* back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_btn@2x.png"; sourceTree = "<group>"; };
+		CE3E6BDD15E8CFC3003600EA /* body_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "body_background@2x.png"; sourceTree = "<group>"; };
+		CE3E6BDE15E8CFC3003600EA /* common_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_button@2x.png"; sourceTree = "<group>"; };
+		CE3E6BDF15E8CFC3003600EA /* nav_bar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar_background@2x.png"; sourceTree = "<group>"; };
+		CE3E6BE015E8CFC3003600EA /* nav_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_button@2x.png"; sourceTree = "<group>"; };
+		CE3E6BFB15E8D5AF003600EA /* LocalFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalFriendsViewController.xib; sourceTree = "<group>"; };
+		CE3E6BFD15E8D5BB003600EA /* SinaFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinaFriendsViewController.xib; sourceTree = "<group>"; };
 		CE43D0D615E67CD9007EB458 /* FriendsSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsSelectionViewController.h; sourceTree = "<group>"; };
 		CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsSelectionViewController.m; sourceTree = "<group>"; };
 		CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsSelectionViewController.xib; sourceTree = "<group>"; };
@@ -282,6 +293,15 @@
 		CE43D0DC15E67DB4007EB458 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+		CE8D426315EC52E100122D1A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = avatarSyncor/Localizable.strings; sourceTree = "<group>"; };
+		CE8D426515EC539500122D1A /* RootTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabViewController.h; sourceTree = "<group>"; };
+		CE8D426615EC53A700122D1A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE8D426815EC541700122D1A /* RootTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabViewController.m; sourceTree = "<group>"; };
+		CE8D426A15EC546D00122D1A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE8D426C15EC551A00122D1A /* sina_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina_logo.png; sourceTree = "<group>"; };
+		CE8D426F15EC588A00122D1A /* top_icon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_icon_pressed.png; sourceTree = "<group>"; };
+		CE8D427215EC58A600122D1A /* friend_icon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend_icon_pressed.png; sourceTree = "<group>"; };
+		CE8D427415EC594200122D1A /* tabbar_setting_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_setting_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +336,7 @@
 		CE2AC9C315DC9B940009E024 = {
 			isa = PBXGroup;
 			children = (
+				CE8D426315EC52E100122D1A /* Localizable.strings */,
 				CE2AC9D815DC9B940009E024 /* avatarSyncor */,
 				CE2AC9D115DC9B940009E024 /* Frameworks */,
 				CE2AC9CF15DC9B940009E024 /* Products */,
@@ -350,10 +371,11 @@
 		CE2AC9D815DC9B940009E024 /* avatarSyncor */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D426615EC53A700122D1A /* main.m */,
+				CE3E6BD115E8CFC3003600EA /* res */,
 				CE3CE28615DE4C6A00AC6608 /* model */,
 				CE2ACA1215DC9CD00009E024 /* controller */,
 				CE2ACA0615DC9CC80009E024 /* view */,
-				CE2AC9FD15DC9CC20009E024 /* res */,
 				CE2AC9E115DC9B940009E024 /* AppDelegate.h */,
 				CE2AC9E215DC9B940009E024 /* AppDelegate.m */,
 				CE2AC9D915DC9B940009E024 /* Supporting Files */,
@@ -364,39 +386,25 @@
 		CE2AC9D915DC9B940009E024 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE3CE3A615E6692D00AC6608 /* Localizable.strings */,
 				CE2AC9DA15DC9B940009E024 /* avatarSyncor-Info.plist */,
-				CE2AC9DB15DC9B940009E024 /* InfoPlist.strings */,
-				CE2AC9DE15DC9B940009E024 /* main.m */,
 				CE2AC9E015DC9B940009E024 /* avatarSyncor-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CE2AC9FD15DC9CC20009E024 /* res */ = {
-			isa = PBXGroup;
-			children = (
-				CE2AC9FE15DC9CC20009E024 /* first.png */,
-				CE2AC9FF15DC9CC20009E024 /* first@2x.png */,
-				CE2ACA0015DC9CC20009E024 /* second.png */,
-				CE2ACA0115DC9CC20009E024 /* second@2x.png */,
-			);
-			path = res;
-			sourceTree = "<group>";
-		};
 		CE2ACA0615DC9CC80009E024 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D426815EC541700122D1A /* RootTabViewController.m */,
+				CE8D426515EC539500122D1A /* RootTabViewController.h */,
 				CE3CE38C15E62F7900AC6608 /* merge */,
 				CE0FA45915DCFD4100E2574B /* setting */,
 				CE2ACA1C15DCB4760009E024 /* common */,
 				CE2ACA1915DC9EE20009E024 /* SinaFriends */,
 				CE2ACA1815DC9ED80009E024 /* LocalFriends */,
-				CE2ACA0915DC9CC80009E024 /* RootTabViewController.h */,
-				CE2ACA0A15DC9CC80009E024 /* RootTabViewController.m */,
 				CE2ACA0B15DC9CC80009E024 /* RootTabViewController.xib */,
 				CE2ACAEE15DCC6F90009E024 /* LoginViewController.h */,
-				CE2ACAEF15DCC6F90009E024 /* LoginViewController.m */,
+				CE8D426A15EC546D00122D1A /* LoginViewController.m */,
 				CE2ACAF015DCC6F90009E024 /* LoginViewController.xib */,
 			);
 			path = view;
@@ -421,7 +429,7 @@
 		CE2ACA1815DC9ED80009E024 /* LocalFriends */ = {
 			isa = PBXGroup;
 			children = (
-				CE2AC9F215DC9B940009E024 /* LocalFriendsViewController.xib */,
+				CE3E6BFB15E8D5AF003600EA /* LocalFriendsViewController.xib */,
 				CE2ACA0715DC9CC80009E024 /* LocalFriendsViewController.h */,
 				CE2ACA0815DC9CC80009E024 /* LocalFriendsViewController.m */,
 			);
@@ -431,6 +439,7 @@
 		CE2ACA1915DC9EE20009E024 /* SinaFriends */ = {
 			isa = PBXGroup;
 			children = (
+				CE3E6BFD15E8D5BB003600EA /* SinaFriendsViewController.xib */,
 				CE43D0DC15E67DB4007EB458 /* FriendsViewController.h */,
 				CE43D0DD15E67DB4007EB458 /* FriendsViewController.m */,
 				CE43D0DE15E67DB4007EB458 /* FriendsViewController.xib */,
@@ -438,7 +447,6 @@
 				CE43D0D615E67CD9007EB458 /* FriendsSelectionViewController.h */,
 				CE43D0D715E67CD9007EB458 /* FriendsSelectionViewController.m */,
 				CE43D0D815E67CD9007EB458 /* FriendsSelectionViewController.xib */,
-				CE2AC9F515DC9B940009E024 /* SinaFriendsViewController.xib */,
 				CE2ACA0C15DC9CC80009E024 /* SinaFriendsViewController.h */,
 				CE2ACA0D15DC9CC80009E024 /* SinaFriendsViewController.m */,
 			);
@@ -490,7 +498,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2ACA4015DCB6740009E024 /* CTMBase64 */,
-				CE2ACA4415DCB6740009E024 /* Localizable.strings */,
 				CE2ACA4615DCB6740009E024 /* Resource */,
 				CE2ACA5615DCB6740009E024 /* SBJSON */,
 				CE2ACA6415DCB6740009E024 /* SFHFKeychainUtils */,
@@ -673,6 +680,46 @@
 			name = merge;
 			sourceTree = "<group>";
 		};
+		CE3E6BD115E8CFC3003600EA /* res */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E6BD215E8CFC3003600EA /* 320*480 */,
+				CE3E6BDA15E8CFC3003600EA /* 640*960 */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		CE3E6BD215E8CFC3003600EA /* 320*480 */ = {
+			isa = PBXGroup;
+			children = (
+				CE8D427415EC594200122D1A /* tabbar_setting_icon.png */,
+				CE8D427215EC58A600122D1A /* friend_icon_pressed.png */,
+				CE8D426F15EC588A00122D1A /* top_icon_pressed.png */,
+				CE8D426C15EC551A00122D1A /* sina_logo.png */,
+				CE3E6BD315E8CFC3003600EA /* avatar_icon.png */,
+				CE3E6BD415E8CFC3003600EA /* back_btn.png */,
+				CE3E6BD515E8CFC3003600EA /* body_background.png */,
+				CE3E6BD615E8CFC3003600EA /* common_button.png */,
+				CE3E6BD715E8CFC3003600EA /* nav_bar_background.png */,
+				CE3E6BD815E8CFC3003600EA /* nav_button.png */,
+				CE3E6BD915E8CFC3003600EA /* tabbar_background.png */,
+			);
+			path = "320*480";
+			sourceTree = "<group>";
+		};
+		CE3E6BDA15E8CFC3003600EA /* 640*960 */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E6BDB15E8CFC3003600EA /* avatar_icon@2x.png */,
+				CE3E6BDC15E8CFC3003600EA /* back_btn@2x.png */,
+				CE3E6BDD15E8CFC3003600EA /* body_background@2x.png */,
+				CE3E6BDE15E8CFC3003600EA /* common_button@2x.png */,
+				CE3E6BDF15E8CFC3003600EA /* nav_bar_background@2x.png */,
+				CE3E6BE015E8CFC3003600EA /* nav_button@2x.png */,
+			);
+			path = "640*960";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -710,6 +757,7 @@
 				en,
 				"zh-Hans",
 				"zh-Hant",
+				"zh-Hans-CN",
 			);
 			mainGroup = CE2AC9C315DC9B940009E024;
 			productRefGroup = CE2AC9CF15DC9B940009E024 /* Products */;
@@ -742,15 +790,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2AC9DD15DC9B940009E024 /* InfoPlist.strings in Resources */,
-				CE2AC9F415DC9B940009E024 /* LocalFriendsViewController.xib in Resources */,
-				CE2AC9F715DC9B940009E024 /* SinaFriendsViewController.xib in Resources */,
-				CE2ACA0215DC9CC20009E024 /* first.png in Resources */,
-				CE2ACA0315DC9CC20009E024 /* first@2x.png in Resources */,
-				CE2ACA0415DC9CC20009E024 /* second.png in Resources */,
-				CE2ACA0515DC9CC20009E024 /* second@2x.png in Resources */,
 				CE2ACA1015DC9CC80009E024 /* RootTabViewController.xib in Resources */,
-				CE2ACA8315DCB6740009E024 /* Localizable.strings in Resources */,
 				CE2ACA8415DCB6740009E024 /* bg.png in Resources */,
 				CE2ACA8515DCB6740009E024 /* bg@2x.png in Resources */,
 				CE2ACA8615DCB6740009E024 /* bg_land.png in Resources */,
@@ -772,9 +812,28 @@
 				CE0FA45815DCFD3C00E2574B /* SettingViewController.xib in Resources */,
 				CE3CE38B15E62F7400AC6608 /* FriendMergeViewContriller.xib in Resources */,
 				CE3CE39115E631F500AC6608 /* MergeViewCell.xib in Resources */,
-				CE3CE3A815E6692D00AC6608 /* Localizable.strings in Resources */,
 				CE43D0DA15E67CD9007EB458 /* FriendsSelectionViewController.xib in Resources */,
 				CE43D0E015E67DB4007EB458 /* FriendsViewController.xib in Resources */,
+				CE3E6BE115E8CFC3003600EA /* avatar_icon.png in Resources */,
+				CE3E6BE215E8CFC3003600EA /* back_btn.png in Resources */,
+				CE3E6BE315E8CFC3003600EA /* body_background.png in Resources */,
+				CE3E6BE415E8CFC3003600EA /* common_button.png in Resources */,
+				CE3E6BE515E8CFC3003600EA /* nav_bar_background.png in Resources */,
+				CE3E6BE615E8CFC3003600EA /* nav_button.png in Resources */,
+				CE3E6BE715E8CFC3003600EA /* tabbar_background.png in Resources */,
+				CE3E6BE815E8CFC3003600EA /* avatar_icon@2x.png in Resources */,
+				CE3E6BE915E8CFC3003600EA /* back_btn@2x.png in Resources */,
+				CE3E6BEA15E8CFC3003600EA /* body_background@2x.png in Resources */,
+				CE3E6BEB15E8CFC3003600EA /* common_button@2x.png in Resources */,
+				CE3E6BEC15E8CFC3003600EA /* nav_bar_background@2x.png in Resources */,
+				CE3E6BED15E8CFC3003600EA /* nav_button@2x.png in Resources */,
+				CE3E6BFC15E8D5AF003600EA /* LocalFriendsViewController.xib in Resources */,
+				CE3E6BFE15E8D5BB003600EA /* SinaFriendsViewController.xib in Resources */,
+				CE8D426415EC52E100122D1A /* Localizable.strings in Resources */,
+				CE8D426D15EC551A00122D1A /* sina_logo.png in Resources */,
+				CE8D427115EC588A00122D1A /* top_icon_pressed.png in Resources */,
+				CE8D427315EC58A700122D1A /* friend_icon_pressed.png in Resources */,
+				CE8D427515EC594200122D1A /* tabbar_setting_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,10 +844,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2AC9DF15DC9B940009E024 /* main.m in Sources */,
 				CE2AC9E315DC9B940009E024 /* AppDelegate.m in Sources */,
 				CE2ACA0E15DC9CC80009E024 /* LocalFriendsViewController.m in Sources */,
-				CE2ACA0F15DC9CC80009E024 /* RootTabViewController.m in Sources */,
 				CE2ACA1115DC9CC80009E024 /* SinaFriendsViewController.m in Sources */,
 				CE2ACA2015DCB4760009E024 /* CustomUITabBarItem.m in Sources */,
 				CE2ACA2315DCB4BC0009E024 /* UIImage+Scale.m in Sources */,
@@ -817,7 +874,6 @@
 				CE2ACAC215DCB6820009E024 /* UIButton+WebCache.m in Sources */,
 				CE2ACAC315DCB6820009E024 /* UIImageView+WebCache.m in Sources */,
 				CE2ACAC615DCB6B10009E024 /* ViewHelper.m in Sources */,
-				CE2ACAF115DCC6FA0009E024 /* LoginViewController.m in Sources */,
 				CE2ACB0A15DCCEBF0009E024 /* AddressBookManager.m in Sources */,
 				CE2ACB0B15DCCEBF0009E024 /* BaseManager.m in Sources */,
 				CE2ACB0D15DCCEBF0009E024 /* DataManager.m in Sources */,
@@ -836,57 +892,13 @@
 				CE3CE39015E631F500AC6608 /* MergeViewCell.m in Sources */,
 				CE43D0D915E67CD9007EB458 /* FriendsSelectionViewController.m in Sources */,
 				CE43D0DF15E67DB4007EB458 /* FriendsViewController.m in Sources */,
+				CE8D426715EC53A700122D1A /* main.m in Sources */,
+				CE8D426915EC541700122D1A /* RootTabViewController.m in Sources */,
+				CE8D426B15EC546D00122D1A /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CE2AC9DB15DC9B940009E024 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2AC9DC15DC9B940009E024 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CE2AC9F215DC9B940009E024 /* LocalFriendsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2AC9F315DC9B940009E024 /* en */,
-			);
-			name = LocalFriendsViewController.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		CE2AC9F515DC9B940009E024 /* SinaFriendsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2AC9F615DC9B940009E024 /* en */,
-			);
-			name = SinaFriendsViewController.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		CE2ACA4415DCB6740009E024 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2ACA4515DCB6740009E024 /* en */,
-				CE2ACA7715DCB6740009E024 /* zh-Hans */,
-				CE2ACA7815DCB6740009E024 /* zh-Hant */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		CE3CE3A615E6692D00AC6608 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE3CE3A715E6692D00AC6608 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE2AC9F815DC9B940009E024 /* Debug */ = {

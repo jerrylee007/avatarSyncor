@@ -50,6 +50,10 @@
 								<string key="NSReuseIdentifierKey">_NS:567</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage" id="676099989">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">avatar_icon.png</string>
+								</object>
 							</object>
 							<object class="IBUILabel" id="473735640">
 								<reference key="NSNextResponder" ref="614183485"/>
@@ -92,6 +96,7 @@
 								<string key="NSReuseIdentifierKey">_NS:567</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="676099989"/>
 							</object>
 							<object class="IBUILabel" id="213891070">
 								<reference key="NSNextResponder" ref="614183485"/>
@@ -287,6 +292,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">avatar_icon.png</string>
+			<string key="NS.object.0">{50, 50}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>

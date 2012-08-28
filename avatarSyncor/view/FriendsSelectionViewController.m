@@ -36,9 +36,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self.navigationItem setLeftBarButtonItem:[ViewHelper getBackBarItemOfTarget:self action:@selector(onBackButtonClicked) title:NSLocalizedString(@"go_back", @"go_back")]];
+        [self.navigationItem setLeftBarButtonItem:[ViewHelper getBackBarItemOfTarget:self action:@selector(onBackButtonClicked) title:NSLocalizedString(@"返回", @"返回")]];
         
-        [self.navigationItem setTitle:NSLocalizedString(@"at_my_followed_person", @"at_my_followed_person")];
+        [self.navigationItem setTitle:NSLocalizedString(@"选择新浪好友", @"选择新浪好友")];
     }
     return self;
 }

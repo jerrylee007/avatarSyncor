@@ -47,19 +47,19 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">注销Sina登录</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="750460838">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
+						<reference key="IBUINormalTitleColor" ref="750460838"/>
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="661525983">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="587829706">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">common_button.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="159904140">
 							<int key="type">2</int>
@@ -83,14 +83,11 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">开始头像同步</string>
 						<reference key="IBUIHighlightedTitleColor" ref="750460838"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
+						<reference key="IBUINormalTitleColor" ref="750460838"/>
 						<reference key="IBUINormalTitleShadowColor" ref="661525983"/>
+						<reference key="IBUINormalBackgroundImage" ref="587829706"/>
 						<reference key="IBUIFontDescription" ref="159904140"/>
 						<reference key="IBUIFont" ref="763398647"/>
 					</object>
@@ -225,6 +222,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">common_button.png</string>
+			<string key="NS.object.0">{107, 37}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>

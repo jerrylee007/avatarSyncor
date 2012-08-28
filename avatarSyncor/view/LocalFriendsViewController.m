@@ -28,8 +28,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
 }
@@ -137,6 +135,10 @@
     cell.name.text = [[DataManager sharedManager].abMannager getNameOfContact:[[_localFriends objectAtIndex:[indexPath row]] intValue]];
     
     cell.avatar.image = [[DataManager sharedManager].abMannager getAvatarOfContact:[[_localFriends objectAtIndex:[indexPath row]] intValue]];
+    
+    if (cell.avatar.image == nil) {
+        cell.avatar.image = [UIImage imageNamed:@"avatar_icon"];
+    }
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

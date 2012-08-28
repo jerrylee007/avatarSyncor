@@ -46,9 +46,6 @@
 
 /* Begin PBXFileReference section */
 		CEB0BD921546DC68001B2F37 /* WBAuthorizeWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBAuthorizeWebView.xib; sourceTree = "<group>"; };
-		E649E245149990BC00AC6590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E649E247149990CC00AC6590 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		E649E248149990CE00AC6590 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E659FB9614B54449003EBE68 /* close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_btn.png; sourceTree = "<group>"; };
 		E659FB9714B54449003EBE68 /* close_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_btn@2x.png"; sourceTree = "<group>"; };
 		E659FB9814B54449003EBE68 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 		E649E2421499906E00AC6590 /* Localize */ = {
 			isa = PBXGroup;
 			children = (
-				E649E246149990BC00AC6590 /* Localizable.strings */,
 			);
 			name = Localize;
 			sourceTree = "<group>";
@@ -396,19 +392,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E649E246149990BC00AC6590 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E649E245149990BC00AC6590 /* en */,
-				E649E247149990CC00AC6590 /* zh-Hans */,
-				E649E248149990CE00AC6590 /* zh-Hant */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E6ABCC2414988423008E0A37 /* Debug */ = {
