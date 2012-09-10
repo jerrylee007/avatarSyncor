@@ -35,9 +35,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-        self.navigationItem.title = NSLocalizedString(@"app_name", @"app_name");
+        self.navigationItem.title = NSLocalizedString(@"头像同步助手", @"头像同步助手");
 
-        [self.navigationItem setRightBarButtonItem:[ViewHelper getBarItemOfTarget:self action:@selector(onDoneButtonClicked:) title:NSLocalizedString(@"done", @"done")]];
+        [self.navigationItem setRightBarButtonItem:[ViewHelper getBarItemOfTarget:self action:@selector(onDoneButtonClicked:) title:NSLocalizedString(@"返回", @"返回")]];
     }
     return self;
 }

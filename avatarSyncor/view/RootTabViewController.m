@@ -134,7 +134,7 @@
     NSArray* cameraShareArray = [NSArray arrayWithObjects:@"设置",@"设置",nil];
     NSArray* localizedStringsArray = [NSArray arrayWithObjects:homeArray, categoryArray, cameraShareArray, nil];
     
-    NSArray* tabbarIconNamesArray = [NSArray arrayWithObjects:@"top_icon_pressed", @"friend_icon_pressed", @"tabbar_setting_icon", nil];
+    NSArray* tabbarIconNamesArray = [NSArray arrayWithObjects:@"top_icon_local", @"top_icon_sina", @"top_icon_settings", nil];
     
     NSInteger index = 0;
     for (UINavigationController* navigation in [self customizableViewControllers]){

@@ -62,6 +62,8 @@
 //                                                fetchLimit:0
 //                                         prefetchRelations:nil 
 //                                                   context:[CoreDataManager sharedManager].managedObjectContext];
+    
+    
 
     
     for (NSNumber* recordId in self.localFriends) {
@@ -156,7 +158,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

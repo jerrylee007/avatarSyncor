@@ -16,6 +16,8 @@
 #import "ViewHelper.h"
 #import "FriendsSelectionViewController.h"
 #import "UIImageView+WebCache.h"
+#import "SinaSDKManager.h"
+#import "LoginViewController.h"
 
 #define ACTIONSHEET_MERGE_ACTION            (1)
 
@@ -71,15 +73,43 @@
     // Do any additional setup after loading the view from its nib.
     [self.friendListView setDelegate:self];
     [self.friendListView setDataSource:self];
-    
-    self.localFriends = [[CoreDataManager sharedManager] fetchAllEntities:@"NativeFriend" 
-                                             withPredicate:nil 
-                                               withSorting:nil
-                                                fetchLimit:0
-                                         prefetchRelations:nil 
-                                                    context:[CoreDataManager sharedManager].managedObjectContext];
 
-
+    dispatch_async(dispatch_queue_create("GET_AB_BG_QUEUE", DISPATCH_QUEUE_SERIAL), ^{
+        
+        if (_localFriends == nil) {
+            self.localFriends = [[DataManager sharedManager].abMannager getAllABRecordIds];
+        }
+        
+        for (NSNumber* recordId in self.localFriends) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"nativeid == %@",
+                                      recordId];
+            NativeFriend * nativeFriend = (NativeFriend*)[[CoreDataManager sharedManager] fetchEntity:@"NativeFriend" withPredicate:predicate prefetchRelations:nil context:[CoreDataManager sharedManager].managedObjectContext];
+            
+            if (nativeFriend == nil) {
+                [NativeFriend nativeFriendWithABRecordId:[recordId intValue] inContext:[CoreDataManager sharedManager].managedObjectContext];
+            }
+            else
+            {
+                if ([[[DataManager sharedManager].abMannager getUpdateDateForContact:[recordId intValue]] compare:nativeFriend.timestamp])
+                {
+                    //TODO: record it
+                }
+            }
+        }
+        
+        [[CoreDataManager sharedManager] saveMainContextChanges];
+        
+        self.localFriends = [[CoreDataManager sharedManager] fetchAllEntities:@"NativeFriend" 
+                                                                withPredicate:nil 
+                                                                  withSorting:nil
+                                                                   fetchLimit:0
+                                                            prefetchRelations:nil 
+                                                                      context:[CoreDataManager sharedManager].managedObjectContext];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.friendListView reloadData];
+        });
+    });
 }
 
 - (void)viewDidUnload
@@ -128,6 +158,11 @@
         cell.sinaName.text = nativeFriend.sinaFriend.name;
         [cell.sinaAvatarImageView setImageWithURL:[NSURL URLWithString:nativeFriend.sinaFriend.profile_image]];
     }
+    else
+    {
+        cell.sinaName.text = @"无匹配新浪好友";
+        [cell.sinaAvatarImageView setHidden:YES];
+    }
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -145,7 +180,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -172,15 +207,24 @@
                 
                 if ([pressed isEqualToString:MERGE_ACTION_START])
                 {
-                    FriendsSelectionViewController * sinaFriendsSelectViewController = [[[FriendsSelectionViewController alloc] initWithNibName:nil bundle:nil] autorelease];
-                    
-                    UINavigationController * navController= [[UINavigationController alloc] initWithRootViewController: sinaFriendsSelectViewController];
-                    
-                    [sinaFriendsSelectViewController setDelegate:self];
-                    
-                    [self presentModalViewController: navController animated:YES];
-                    [navController release];
-
+                    if ([[SinaSDKManager sharedManager] isLogin]) {
+                        FriendsSelectionViewController * sinaFriendsSelectViewController = [[[FriendsSelectionViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+                        
+                        UINavigationController * navController= [[UINavigationController alloc] initWithRootViewController: sinaFriendsSelectViewController];
+                        
+                        [sinaFriendsSelectViewController setDelegate:self];
+                        
+                        [self presentModalViewController: navController animated:YES];
+                        [navController release];
+                    }
+                    else
+                    {
+                        LoginViewController * loginViewController = [[[LoginViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+                        
+                        UINavigationController * navController= [[UINavigationController alloc] initWithRootViewController: loginViewController];
+                        [self presentModalViewController: navController animated:YES];
+                        [navController release];
+                    }
                 }
                 else if ([pressed isEqualToString:MERGE_ACTION_RESET])
                 {
@@ -212,10 +256,14 @@
     mergeActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     mergeActionSheet.tag = ACTIONSHEET_MERGE_ACTION;
     
+    NativeFriend * nativeFriend = (NativeFriend*)[_localFriends objectAtIndex:self.currentFriendIndex];
+    
 
     [mergeActionSheet addButtonWithTitle:MERGE_ACTION_START];        
 
-    [mergeActionSheet addButtonWithTitle:MERGE_ACTION_RESET];
+    if (nativeFriend.sinaFriend) {
+        [mergeActionSheet addButtonWithTitle:MERGE_ACTION_RESET];
+    }
 
     [mergeActionSheet setDestructiveButtonIndex:[mergeActionSheet addButtonWithTitle:NSLocalizedString(@"取消", @"取消")]];
     [mergeActionSheet showInView:self.view];

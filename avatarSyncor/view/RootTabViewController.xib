@@ -76,13 +76,13 @@
 					</object>
 					<array class="NSMutableArray" key="IBUIViewControllers">
 						<object class="IBUIViewController" id="298194617">
-							<string key="IBUITitle">LocalFriendsViewController</string>
+							<string key="IBUITitle">FriendMergeViewContriller</string>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="1649231">
 								<string key="IBUITitle">Root View Controller</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="141170455"/>
-							<string key="IBUINibName">LocalFriendsViewController</string>
+							<string key="IBUINibName">FriendMergeViewContriller</string>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 								<int key="IBUIInterfaceOrientation">1</int>
 								<int key="interfaceOrientation">1</int>
@@ -389,7 +389,7 @@
 				<string key="64.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="68.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="69.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="70.CustomClassName">LocalFriendsViewController</string>
+				<string key="70.CustomClassName">FriendMergeViewContriller</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
